@@ -8,7 +8,9 @@ group :production do
   gem 'pg'
 end
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
