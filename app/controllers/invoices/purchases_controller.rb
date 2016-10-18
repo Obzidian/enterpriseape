@@ -1,5 +1,4 @@
-class PurchasesController < ApplicationController
-  before_action :set_purchase, only: [:show, :edit, :update, :destroy]
+class Invoices::PurchasesController < ApplicationController
 
   # GET /purchases
   # GET /purchases.json
@@ -14,6 +13,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases/new
   def new
+    @invoice = Invoice.find(params[:invoice_id])
     @purchase = Purchase.new
   end
 
